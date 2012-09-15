@@ -1,0 +1,10 @@
+<%= payment_service_for '1', '10000100', :amount => '123',
+                                         :service => :pay_fast,
+                                         :credential2 => '46f0cd694581a' do |s| %>
+
+  <% s.item_name 'Name' %>
+  <% s.return_url 'http://SITE/pay_fast/success' %>
+  <% s.cancel_url 'http://SITE/pay_fast/cancel' %>
+  <% s.notify_url 'http://SITE/pay_fast/paid' %>
+  <%= submit_tag "Submit" %>
+<% end %>
